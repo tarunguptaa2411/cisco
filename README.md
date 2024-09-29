@@ -63,54 +63,9 @@ Through the use of modern tools such as **Flask**, **Kafka**, **Prometheus**, **
 
 ---
 
-## Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-repo/router-monitoring-platform.git
-   cd router-monitoring-platform
-   ```
-
-2. **Set up virtual environment** (optional but recommended):
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run Flask server**:
-   ```bash
-   python app.py
-   ```
-
-5. **Set up Kafka**:  
-   Ensure Kafka and Zookeeper are up and running. Refer to the [Kafka Quickstart Guide](https://kafka.apache.org/quickstart) if needed.
-
-6. **Configure Prometheus**:  
-   Update `prometheus.yml` to scrape metrics from Flask:
-   ```yaml
-   scrape_configs:
-     - job_name: 'flask_router_simulation'
-       static_configs:
-         - targets: ['localhost:5000']
-   ```
-
-7. **Launch Grafana**:  
-   After setting up **Prometheus** as a data source in Grafana, import pre-configured dashboards for real-time visualization.
-
----
-
-## Usage
-
 1. **Simulate Routers**: 
    Use the API to simulate routers and their metrics:
-   ```bash
-   curl -X GET "http://localhost:5000/routers/simulate"
-   ```
+  
 
 2. **Monitor in Real-time**:
    Open **Grafana** to view real-time visualizations of router metrics.
@@ -126,18 +81,4 @@ Through the use of modern tools such as **Flask**, **Kafka**, **Prometheus**, **
 - Expand anomaly detection to handle more complex patterns using **Deep Learning** techniques.
 - Introduce an automated **self-healing mechanism** to resolve detected anomalies autonomously.
 
----
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
----
-
-## Contact
-
-For any inquiries, feel free to contact me via [email@example.com](mailto:email@example.com).
-
----
-
-This `README` structure provides a clear and engaging overview, while also offering instructions for setup and usage. You can further adjust the content to match your exact project details.
